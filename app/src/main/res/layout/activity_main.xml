@@ -4,15 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/black">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/logo_green_flag"
+        app:layout_constraintBottom_toTopOf="@+id/tv_main1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_main1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/museosans_500"
+        android:text="@string/main_tv1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ibtn_create_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tick1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tick"
+        app:layout_constraintStart_toStartOf="@id/tv_main1"
+        app:layout_constraintTop_toBottomOf="@id/tv_main1" />
+
+    <ImageView
+        android:id="@+id/tick2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tick"
+        app:layout_constraintTop_toBottomOf="@id/tick1"
+        app:layout_constraintStart_toStartOf="@id/tv_main1"
+    />
+
+    <ImageView
+        android:id="@+id/tick3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tick"
+        app:layout_constraintTop_toBottomOf="@id/tick2"
+        app:layout_constraintStart_toStartOf="@id/tv_main1"
+    />
+
+
+    <TextView
+        android:id="@+id/tv_list1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/museosans_300"
+        android:text="@string/main_tvlist_1"
+        android:textColor="@color/white"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tick1"
+        app:layout_constraintEnd_toEndOf="@id/tv_main1"
+        app:layout_constraintStart_toEndOf="@+id/tick1"
+        app:layout_constraintTop_toTopOf="@+id/tick1" />
+
+    <TextView
+        android:id="@+id/tv_list2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museosans_300"
+        android:text="@string/main_tvlist_2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/tv_list1"
+        app:layout_constraintStart_toStartOf="@+id/tv_list1"
+        app:layout_constraintBottom_toBottomOf="@id/tick2"
+        app:layout_constraintTop_toTopOf="@+id/tick2"
+        />
+
+    <TextView
+        android:id="@+id/tv_list3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museosans_300"
+        android:text="@string/main_tvlist_3"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/tv_list2"
+        app:layout_constraintStart_toStartOf="@+id/tv_list2"
+        app:layout_constraintBottom_toBottomOf="@id/tick3"
+        app:layout_constraintTop_toTopOf="@+id/tick3"
+        />
+
+
+    <ImageButton
+        android:id="@+id/ibtn_create_account"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/gradient_button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:fontFamily="@font/museosans_300"
+        app:layout_constraintBottom_toBottomOf="@+id/ibtn_create_account"
+        app:layout_constraintEnd_toEndOf="@+id/ibtn_create_account"
+        app:layout_constraintStart_toStartOf="@+id/ibtn_create_account"
+        app:layout_constraintTop_toTopOf="@+id/ibtn_create_account" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

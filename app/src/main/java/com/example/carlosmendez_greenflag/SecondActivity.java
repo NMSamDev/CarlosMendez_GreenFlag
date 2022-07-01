@@ -6,21 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-    ImageButton btnCA;
-
+    ImageButton goBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
-        btnCA = findViewById(R.id.ibtn_create_account);
-
-        btnCA.setOnClickListener(view -> {
-            Intent intent = new Intent(this, SecondActivity.class);
+        goBack = findViewById(R.id.goto_main);
+        goBack.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
-
     }
 }
