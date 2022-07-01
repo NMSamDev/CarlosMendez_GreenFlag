@@ -20,19 +20,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_second1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/v_barrier"
+    <TextView
+        android:id="@+id/tv_second1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/v_barrier"
 
-            android:text="@string/create_account"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:fontFamily="@font/museosans_300"
-            android:textSize="30sp"
-            />
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:fontFamily="@font/museosans_300"
+        android:textSize="30sp"
+        />
 
     <View
         android:id="@+id/v_barrier"
@@ -80,9 +80,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:ems="10"
+                android:text="SampleText@sample"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
-                android:textSize="30sp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -106,7 +106,6 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:textSize="30sp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -115,7 +114,6 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:text="@string/password_repeat"
                 android:textColor="@color/white"
                 android:fontFamily="@font/museosans_300"
@@ -130,7 +128,6 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:textSize="30sp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -143,6 +140,32 @@
                 android:text="@string/password_criteria"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/gradient_button_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/btn_next"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+                    android:text="@string/next"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/museosans_300"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </LinearLayout>
