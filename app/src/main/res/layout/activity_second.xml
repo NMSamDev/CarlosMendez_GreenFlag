@@ -120,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:ems="10"
+                android:hint="@string/password_hint"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:paddingStart="15dp"
@@ -191,7 +192,9 @@
                     android:src="@drawable/gradient_button_background"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+
                     tools:ignore="SpeakableTextPresentCheck" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
