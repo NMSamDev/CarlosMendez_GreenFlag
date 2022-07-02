@@ -64,10 +64,8 @@
             <TextView
                 android:id="@+id/tv_email"
                 android:layout_marginTop="20dp"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:text="@string/email"
                 android:textColor="@color/white"
                 android:fontFamily="@font/museosans_300"
@@ -80,18 +78,36 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:ems="10"
-                android:text="SampleText@sample"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv_error_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borderline_rb"
+                android:drawableStart="@drawable/cross"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/museosans_300"
+                android:paddingStart="15dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="20dp"
+                android:text="@string/error_email1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone"
+                />
 
             <TextView
                 android:id="@+id/tv_password1"
                 android:layout_marginTop="20dp"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:text="@string/password_create"
                 android:textColor="@color/white"
                 android:fontFamily="@font/museosans_300"
@@ -106,19 +122,19 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/tv_password2"
-                android:layout_marginTop="20dp"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/museosans_300"
                 android:text="@string/password_repeat"
                 android:textColor="@color/white"
-                android:fontFamily="@font/museosans_300"
-                android:textSize="30sp"
-                />
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/et_password2"
@@ -128,14 +144,33 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv_error_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borderline_rb"
+                android:drawableStart="@drawable/cross"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/museosans_300"
+                android:paddingStart="15dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone"
+                />
 
             <TextView
                 android:id="@+id/tv_criteria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-
                 android:fontFamily="@font/museosans_300"
                 android:text="@string/password_criteria"
                 android:textColor="@color/white"
@@ -146,6 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 >
 
                 <ImageButton
@@ -162,6 +198,8 @@
                     app:layout_constraintTop_toTopOf="@+id/btn_next"
                     app:layout_constraintBottom_toBottomOf="@+id/btn_next"
                     android:text="@string/next"
+                    android:textSize="25dp"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:fontFamily="@font/museosans_300"
                     />

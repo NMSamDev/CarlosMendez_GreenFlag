@@ -14,5 +14,5 @@
     <string name="password_criteria">Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter. You can use special characters.</string>
     <string name="error_password1">One of the passwords you entered wasn\'t valid</string>
     <string name="error_password2">Your passwords don\'t match</string>
-    <string name="error_email1">An account already exists for this email</string>
+    <string name="error_email1">An account already exists for this email address</string>
 </resources>
