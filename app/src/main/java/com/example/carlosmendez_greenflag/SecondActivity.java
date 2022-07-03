@@ -92,6 +92,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 notEmpty();
+                validatePassword();
             }
         });
 
@@ -106,21 +107,6 @@ public class SecondActivity extends AppCompatActivity {
                 notEmpty();
             }
         });
-    }
-
-    void notEmpty(){
-        if(etEmail.getText().toString().length() > 0){
-            if(etPasswordCreate.getText().toString().length() > 0){
-                if(etPasswordRepeat.getText().toString().length() > 0){
-                    btnNext.setEnabled(true);
-                    btnNext.animate();
-                    btnNext.setColorFilter(tintColorDefault);
-                    return;
-                }
-            }
-        }
-        btnNext.setEnabled(false);
-        btnNext.setColorFilter(tintColorUnavailable);
     }
 
     @Override
@@ -152,7 +138,7 @@ public class SecondActivity extends AppCompatActivity {
         boolean success = databaseHelper.addUser(userModel);
 
         if(success){
-            Toast.makeText(SecondActivity.this, "A new user has been created" + success , Toast.LENGTH_SHORT).show();
+            Toast.makeText(SecondActivity.this, "A new user has been created" , Toast.LENGTH_SHORT).show();
         }
         else{
             etEmail.setBackground(getDrawable(R.drawable.borderline_rw));
@@ -160,7 +146,21 @@ public class SecondActivity extends AppCompatActivity {
             tvErrorEmail.setText(getString(R.string.error_email1));
             tvErrorEmail.setVisibility(View.VISIBLE);
         }
+    }
 
+    void notEmpty(){
+        if(etEmail.getText().toString().length() > 0){
+            if(etPasswordCreate.getText().toString().length() > 0){
+                if(etPasswordRepeat.getText().toString().length() > 0){
+                    btnNext.setEnabled(true);
+                    btnNext.animate();
+                    btnNext.setColorFilter(tintColorDefault);
+                    return;
+                }
+            }
+        }
+        btnNext.setEnabled(false);
+        btnNext.setColorFilter(tintColorUnavailable);
     }
 
     boolean validateEmail(){
@@ -194,17 +194,20 @@ public class SecondActivity extends AppCompatActivity {
             etPasswordCreate.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, getDrawable(R.drawable.tick),null);
             tvErrorPassword.setVisibility(View.GONE);
 
-            if(etPasswordRepeat.getText().toString().equals(etPasswordCreate.getText().toString())){
-                etPasswordRepeat.setBackground(getDrawable(R.drawable.borderline_gw));
-                etPasswordRepeat.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, getDrawable(R.drawable.tick),null);
-                tvErrorPassword.setVisibility(View.GONE);
-            }
-            else {
-                etPasswordRepeat.setBackground(getDrawable(R.drawable.borderline_rw));
-                etPasswordRepeat.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, null,null);
-                tvErrorPassword.setText(getString(R.string.error_password2));
-                tvErrorPassword.setVisibility(View.VISIBLE);
-                result = false;
+            if(etPasswordRepeat.getText().toString().length() > 0){
+                if(etPasswordRepeat.getText().toString().equals(etPasswordCreate.getText().toString())){
+                    etPasswordRepeat.setBackground(getDrawable(R.drawable.borderline_gw));
+                    etPasswordRepeat.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, getDrawable(R.drawable.tick),null);
+                    tvErrorPassword.setVisibility(View.GONE);
+                }
+                else {
+                    etPasswordRepeat.setBackground(getDrawable(R.drawable.borderline_rw));
+                    etPasswordRepeat.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, null,null);
+                    tvErrorPassword.setText(getString(R.string.error_password2));
+                    tvErrorPassword.setVisibility(View.VISIBLE);
+                    result = false;
+                }
+
             }
         }
         else{

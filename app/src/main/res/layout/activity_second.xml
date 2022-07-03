@@ -193,9 +193,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:src="@drawable/gradient_button_background"
+                    android:tint="#80000000"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
@@ -203,6 +205,8 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="@+id/btn_next"
                     app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+                    app:layout_constraintStart_toStartOf="@id/btn_next"
+                    app:layout_constraintEnd_toEndOf="@id/btn_next"
                     android:text="@string/next"
                     android:textSize="25dp"
                     android:textColor="@color/black"
