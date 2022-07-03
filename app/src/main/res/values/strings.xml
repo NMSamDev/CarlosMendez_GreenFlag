@@ -16,4 +16,5 @@
     <string name="error_password1">One of the passwords you entered wasn\'t valid</string>
     <string name="error_password2">Your passwords don\'t match</string>
     <string name="error_email1">An account already exists for this email address</string>
+    <string name="error_email2">Email is not valid</string>
 </resources>
